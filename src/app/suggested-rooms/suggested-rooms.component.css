@@ -232,7 +232,6 @@ header .header-text::before {
     .modal-content {
         flex-direction: column;
         padding: 15px;
-        overflow: scroll;
     }
     .modal-content img {
         width: 100%;
@@ -240,5 +239,13 @@ header .header-text::before {
 .amenitis {
     gap: 35px;
 }
+#booking {
+    width: 80%;
+}
 
+@media screen and (max-width:500px) {
+    .mainDiv {
+        width: 100%;
+    }
+}
 }
