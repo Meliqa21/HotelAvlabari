@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RoomService } from '../room.service';
 import { Room } from '../room';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './rooms.component.css'
 })
 export class RoomsComponent implements OnInit {
-constructor(public roomsrv:RoomService){}
+constructor(public roomsrv:RoomService,private language:LanguageService){}
 
 public rooms:Room[] = [];
 public currentImgIndex = 0;
@@ -21,7 +22,8 @@ public imgLen!:number;
 
 ngOnInit(): void {
   this.GetRooms(),
-  this.rooms = this.roomsrv.getRooms()
+  this.rooms = this.roomsrv.getRooms(),
+  this.langService()
 }
 
 GetRooms(){
@@ -50,4 +52,11 @@ goToImage(index: number) {
   this.currentImgIndex = index;
 }
 
+public lang :number = 0;
+langService(){
+  this.language.language$.subscribe((Value:any) => 
+  {
+    this.lang = Value
+  }) 
+}
 }

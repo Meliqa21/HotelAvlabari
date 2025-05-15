@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-banner',
   imports: [],
@@ -7,9 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
-// images:string[] = ["2FloorHall.JPEG","3Floor-View-Night.JPEG","Builiding.JPEG"];
-
-
+constructor(){
+}
 
 public slides = [ {
   image : "Builiding.JPEG",

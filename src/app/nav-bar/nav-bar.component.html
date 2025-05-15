@@ -1,5 +1,6 @@
+<!-- English -->
+@if (lang == 0) {
 <nav>
-
 <div class="burger-container">
   <div class="burger-icon" (click)="toggleMenu()">
     <i class="fa-solid fa-bars"></i>
@@ -24,3 +25,62 @@
     </ul>
       
 </nav>
+}
+<!-- ---- -->
+ <!-- Georgian -->
+@if (lang == 1){
+  <nav>
+<div class="burger-container">
+  <div class="burger-icon" (click)="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <ul class="menu" [class.open]="isMenuOpen">
+    <li (click)="Close()" routerLink="/">მთავარი</li>
+    <li (click)="Close()" routerLink="/Rooms">ოთახი</li>
+    <li (click)="Close()" routerLink="/Kitchen">სამზარეულო</li>
+    <li (click)="Close()" routerLink="/About">ჩვენს შესახებ</li>
+    
+  </ul>
+</div>
+
+    <div class="Logo">
+        <img src="ლოგო ფონით.jpg" alt="">
+    </div>
+    <ul class="list">
+        <li routerLink="/">მთავარი</li>
+        <li routerLink="/Rooms">ოთახები</li>
+        <li routerLink="/Kitchen">სამზარეულო</li>
+        <li routerLink="/About">ჩვენს შესახებ</li>
+    </ul>
+      
+</nav>
+}
+<!-- ------- -->
+ <!-- Russian -->
+  @if (lang == 2) {
+    <nav>
+<div class="burger-container">
+  <div class="burger-icon" (click)="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <ul class="menu" [class.open]="isMenuOpen">
+    <li (click)="Close()" routerLink="/">Главная</li>
+    <li (click)="Close()" routerLink="/Rooms">комнаты</li>
+    <li (click)="Close()" routerLink="/Kitchen">кухня</li>
+    <li (click)="Close()" routerLink="/About">О нас</li>
+    
+  </ul>
+</div>
+
+    <div class="Logo">
+        <img src="ლოგო ფონით.jpg" alt="">
+    </div>
+    <ul class="list">
+        <li routerLink="/">Главная</li>
+        <li routerLink="/Rooms">комнаты</li>
+        <li routerLink="/Kitchen">кухня</li>
+        <li routerLink="/About">О нас</li>
+    </ul>
+      
+</nav>
+  }

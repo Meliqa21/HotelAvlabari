@@ -198,6 +198,7 @@ header .header-text::before {
     color: #3B4C44;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 15px;
 }
 
 #View:hover {
@@ -237,7 +238,7 @@ header .header-text::before {
         width: 100%;
     }
 .amenitis {
-    gap: 25px;
+    gap: 35px;
 }
 
 }

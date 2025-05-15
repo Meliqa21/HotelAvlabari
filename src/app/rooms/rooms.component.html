@@ -1,3 +1,6 @@
+<!-- English -->
+
+@if (lang == 0 ) {
 <section>
     <div class="d1">
 @for (item of rooms; track $index) {
@@ -7,7 +10,7 @@
     </div>
     <div class="txt">
         <h3>{{item.name}}</h3>
-        <p>{{item.price}}GEL</p>
+        <p>{{item.price}} GEL</p>
     </div>
     <div class="button">
         <button (click)="OpenModal(item)">See Room Details</button>
@@ -57,3 +60,133 @@
 }
 
 </section>
+}
+<!-- --------- -->
+<!-- Georgian -->
+
+@if (lang == 1) {
+    <section>
+    <div class="d1">
+@for (item of rooms; track $index) {
+    <div class="mainDiv">
+        <div class="cardDiv">
+        <img id="cardimg" [src]="item.image[0]" alt="">
+    </div>
+    <div class="txt">
+        <h3>{{item.name}}</h3>
+        <p>{{item.price}} ლარი</p>
+    </div>
+    <div class="button">
+        <button (click)="OpenModal(item)">ნახე ოთახის დეტალები</button>
+    </div></div>
+}</div>
+
+@if (selectedRoom) {
+    <div class="modal-overlay" (click)="CloseModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <span id="X" (click)="CloseModal()">❌</span>
+        <div class="modalImg">
+    <img [src]="selectedRoom.image[currentImgIndex]" alt="{{ selectedRoom.name }}"/>
+    <span>{{Index}} / {{imgLen}} <i (click)="nextImage()" class="fa-solid fa-arrow-right"> </i></span>
+     <button routerLink="/About" id="booking">დაჯავშნის დეტალები</button>
+</div>
+<div class="modalInfo">
+    <p class="DancingF">{{selectedRoom.name}}</p>
+    <p class="barlow-semi-condensed-regular">{{selectedRoom.description}}</p>
+    <div class="amenitis">
+        <div class="amenitiCard">
+            <i class="fa-solid fa-wifi"></i>
+            <p>უფასო Wifi</p>
+        </div>
+        <div class="amenitiCard">
+            <p><i class="fa-solid fa-tv"></i></p>
+            <p>ტელევიზორი</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>კონდიციონერი</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-shower"></i>
+            <p>შხაპი</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-fire-flame-simple"></i>
+            <p>გათბობა</p>
+        </div>
+         <div class="amenitiCard">
+            <i class="fa-solid fa-pump-soap"></i>
+            <p>ჰიგიენის ნივთები</p>
+        </div>
+    </div>
+ </div></div></div>
+
+}
+
+</section>
+
+}
+<!-- ------ -->
+ <!-- Russian -->
+@if (lang == 2){
+    <section>
+    <div class="d1">
+@for (item of rooms; track $index) {
+    <div class="mainDiv">
+        <div class="cardDiv">
+        <img id="cardimg" [src]="item.image[0]" alt="">
+    </div>
+    <div class="txt">
+        <h3>{{item.name}}</h3>
+        <p>{{item.price}} Лари</p>
+    </div>
+    <div class="button">
+        <button (click)="OpenModal(item)">посмотреть детали номера</button>
+    </div></div>
+}</div>
+
+@if (selectedRoom) {
+    <div class="modal-overlay" (click)="CloseModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <span id="X" (click)="CloseModal()">❌</span>
+        <div class="modalImg">
+    <img [src]="selectedRoom.image[currentImgIndex]" alt="{{ selectedRoom.name }}"/>
+    <span>{{Index}} / {{imgLen}} <i (click)="nextImage()" class="fa-solid fa-arrow-right"> </i></span>
+     <button routerLink="/About" id="booking">детали бронирования</button>
+</div>
+<div class="modalInfo">
+    <p class="DancingF">{{selectedRoom.name}}</p>
+    <p class="barlow-semi-condensed-regular">{{selectedRoom.description}}</p>
+    <div class="amenitis">
+        <div class="amenitiCard">
+            <i class="fa-solid fa-wifi"></i>
+            <p>бесплатный Wi-Fi</p>
+        </div>
+        <div class="amenitiCard">
+            <p><i class="fa-solid fa-tv"></i></p>
+            <p>Телевизор</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>кондиционер</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-shower"></i>
+            <p>Душ</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-fire-flame-simple"></i>
+            <p>Обогрев</p>
+        </div>
+         <div class="amenitiCard">
+            <i class="fa-solid fa-pump-soap"></i>
+            <p>Средства гигиены</p>
+        </div>
+    </div>
+ </div></div></div>
+
+}
+
+</section>
+
+}

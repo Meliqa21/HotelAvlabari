@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RoomService } from '../room.service';
 import { Room } from '../room';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 
 @Component({
@@ -11,8 +12,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './suggested-rooms.component.css'
 })
 export class SuggestedRoomsComponent {
-constructor(private roomserv:RoomService){
+constructor(private roomserv:RoomService,private language :LanguageService){
   this.GetRooms();
+  this.langService()
 }
 
 
@@ -21,6 +23,8 @@ public currentImgIndex = 0;
 public Index = this.currentImgIndex +1;
 selectedRoom: Room | null = null;
 public imgLen!:number;
+public lang :number = 0;
+
 GetRooms(){
   this.room = this.roomserv.getRooms().slice(4,7);
 }
@@ -44,6 +48,13 @@ nextImage(){
 
 goToImage(index: number) {
   this.currentImgIndex = index;
+}
+
+langService(){
+  this.language.language$.subscribe((Value:any) => 
+  {
+    this.lang = Value
+  }) 
 }
 
 

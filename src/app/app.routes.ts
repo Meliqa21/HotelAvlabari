@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RoomsComponent } from './rooms/rooms.component';
-import { RoomDetailsComponent } from './room-details/room-details.component';
 import { AboutComponent } from './about/about.component';
 import { KitchenComponent } from './kitchen/kitchen.component';
 import { LocationComponent } from './location/location.component';

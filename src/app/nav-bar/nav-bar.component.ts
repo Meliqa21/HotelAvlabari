@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,6 +9,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
+  constructor(private language:LanguageService){
+    this.langService()
+  }
+
  isMenuOpen = false;
 
  Close(){
@@ -16,4 +21,12 @@ export class NavBarComponent {
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  public lang :number = 0;
+langService(){
+  this.language.language$.subscribe((Value:any) => 
+  {
+    this.lang = Value
+  }) 
+}
 }

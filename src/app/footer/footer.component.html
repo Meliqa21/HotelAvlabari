@@ -3,14 +3,33 @@
         <img src="ლოგო ფონით.jpg" alt="">
     </div>
     <div class="navigation">
-    <ul>
+<!-- ==================================================== -->
+        @if (lang == 0) {
+    <ul> 
         <li routerLink="/">Home</li>
         <li routerLink="/Rooms">Rooms</li>
         <li routerLink="/Kitchen">Kitchen</li>
         <li routerLink="/About">About</li>
     </ul>
+}
+        @if (lang == 1){
+             <ul> 
+        <li routerLink="/">მთავარი</li>
+        <li routerLink="/Rooms">ოთახები</li>
+        <li routerLink="/Kitchen">სამზარეულო</li>
+        <li routerLink="/About">ჩვენს შესახებ</li>
+    </ul>
+}
+     @if (lang == 2) {
+    <ul> 
+        <li routerLink="/">Главная</li>
+        <li routerLink="/Rooms">комнаты</li>
+        <li routerLink="/Kitchen">кухня</li>
+        <li routerLink="/About">О нас</li>
+    </ul>
+     }
     </div>
-
+<!-- ============================================================ -->
 <div class="contacts">
     <ul>
 <li><a href="https://www.instagram.com/hotelavlabari/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
@@ -18,6 +37,13 @@
 <li><i class="fa-brands fa-whatsapp"> </i> +995 556248009</li>
 <li><i class="fa-solid fa-envelope"></i> Gmail - hotelavlabar</li>
 </ul>
+</div>
+<div>
+    <select id="select" name="Language" (change)="onLanguageChange($event)">
+    <option value="0">English</option>
+    <option value="1">ქართული</option>
+    <option value="2">Русский</option>
+    </select>
 </div>
     <div class="C">
 <p>© 2025 |  Hotel Avlabari  |  All Right Reserved</p>
