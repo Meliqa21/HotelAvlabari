@@ -83,6 +83,7 @@ height: 100%;
 
 .list {
     display: none;
+    cursor: pointer;
 }
 
 .Logo img {
