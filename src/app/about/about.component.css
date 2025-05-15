@@ -1,0 +1,28 @@
+.about {
+    width: 70%;
+    margin: 30px auto;
+    background-color: #3B4C44;
+    color: #E8CD9B;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 3px;
+}
+
+a {
+    color: #E8CD9B;
+    transition: 0.4s;
+}
+
+i {
+    font-size: 15px;
+}
+
+a:hover {
+    color: #f5c771;
+}
+
+@media screen and (max-width:400px) {
+    .about {
+        font-size: 18px;
+    }
+}

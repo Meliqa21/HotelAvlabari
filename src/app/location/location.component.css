@@ -1,0 +1,24 @@
+.map-wrapper {
+  max-width: 90%;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 150px;
+}
+
+#loc {
+    text-align: center;
+    font-size: 48px;
+    color: #3B4C44;
+}
+
+@media screen and (max-width:400px) {
+    #loc {
+        font-size: 24px;
+        padding: 0px 15px;
+    }
+}
+
+
+/* #ffd689; */

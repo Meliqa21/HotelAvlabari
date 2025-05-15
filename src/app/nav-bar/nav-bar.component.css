@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    gap: 50px;
+    background-color: #3B4C44;
+    color: #ffd689;
+    height: 70px;
+    justify-content: space-evenly;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+li {
+    transition: 0.4s;
+}
+
+li:hover {
+    color: #ffbc40;
+}
+
+
+
+.Logo img {
+width: 100%;
+height: 100%;
+}

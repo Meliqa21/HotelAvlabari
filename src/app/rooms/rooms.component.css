@@ -1,0 +1,210 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 25px;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.mainDiv {
+    width: 350px;
+    box-shadow: 0px 0px 20px 3px #8d8b88;
+    background-color: #3B4C44;
+    color: #E8CD9B;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    overflow: hidden;
+    
+}
+
+#cardimg {
+    width: 100%;
+    height: 250px;
+    transition: 0.7s;
+    overflow: hidden;
+}
+
+.cardDiv {
+    overflow: hidden;
+}
+
+.txt {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txt p {
+    font-size: 14px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button button {
+    background-color: #E8CD9B;
+    height: 35px;
+    border: 0;
+    width: 100%;
+    color: #3B4C44;
+    transition: 0.5s;
+}
+
+.button button:hover {
+    cursor: pointer;
+    background-color: #ffd689;
+}
+
+.mainDiv:hover img {
+    transform: scale(1.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: #3B4C44;
+  padding: 2rem;
+  border-radius: 12px;
+  /* max-width: 800px; */
+  width: 80%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  color: #E8CD9B;
+  gap: 50px;
+}
+
+.modalImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.modal-content img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+}
+
+#X {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.modalImg Img {
+    /* width: 400px;
+    height: 300px; */
+    width: 570px;
+    height: 400px;
+}
+
+.fa-arrow-right {
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.DancingF {
+    font-family: "Dancing Script",cursive;
+    font-size: 26px;
+}
+
+.amenitis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    text-align: center;
+}
+
+.amenitiCard {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.amenitiCard p {
+    font-size: 13px;
+}
+
+.amenitiCard i {
+    font-size: 20px;
+}
+
+.d1 {
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 25px;
+    justify-content: center;
+}
+
+#booking {
+    background-color: #E8CD9B;
+    color: #3B4C44;
+    border: 1px solid black;
+    padding: 7px;
+    height: 50px;
+    width: 20%;
+    align-self: center;
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
+#booking:hover {
+    background-color: #ffd689;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px) {
+    .modal-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .modal-content img {
+        width: 70%;
+        height: 50%
+    }
+.amenitis {
+    gap: 25px;
+}
+#booking {
+    width: 80%;
+}
+
+@media screen and (max-width:500px) {
+    .mainDiv {
+        width: 100%;
+    }
+}
+
+}
+/* #5C6861; #E8CD9B;#3B4C44; */

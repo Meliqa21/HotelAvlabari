@@ -1,0 +1,59 @@
+<section>
+    <div class="d1">
+@for (item of rooms; track $index) {
+    <div class="mainDiv">
+        <div class="cardDiv">
+        <img id="cardimg" [src]="item.image[0]" alt="">
+    </div>
+    <div class="txt">
+        <h3>{{item.name}}</h3>
+        <p>{{item.price}}GEL</p>
+    </div>
+    <div class="button">
+        <button (click)="OpenModal(item)">See Room Details</button>
+    </div></div>
+}</div>
+
+@if (selectedRoom) {
+    <div class="modal-overlay" (click)="CloseModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <span id="X" (click)="CloseModal()">❌</span>
+        <div class="modalImg">
+    <img [src]="selectedRoom.image[currentImgIndex]" alt="{{ selectedRoom.name }}"/>
+    <span>{{Index}} / {{imgLen}} <i (click)="nextImage()" class="fa-solid fa-arrow-right"> </i></span>
+     <button routerLink="/About" id="booking">Booking Information</button>
+</div>
+<div class="modalInfo">
+    <p class="DancingF">{{selectedRoom.name}}</p>
+    <p class="barlow-semi-condensed-regular">{{selectedRoom.description}}</p>
+    <div class="amenitis">
+        <div class="amenitiCard">
+            <i class="fa-solid fa-wifi"></i>
+            <p>Free Wifi</p>
+        </div>
+        <div class="amenitiCard">
+            <p><i class="fa-solid fa-tv"></i></p>
+            <p>Flat-Screen TV</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Air Conditioning</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-shower"></i>
+            <p>Rain Shower</p>
+        </div>
+        <div class="amenitiCard">
+            <i class="fa-solid fa-fire-flame-simple"></i>
+            <p>Heating</p>
+        </div>
+         <div class="amenitiCard">
+            <i class="fa-solid fa-pump-soap"></i>
+            <p>Free Toiletries</p>
+        </div>
+    </div>
+ </div></div></div>
+
+}
+
+</section>

@@ -1,0 +1,16 @@
+<section>
+<div class="carousel-container">
+  <div class="image-wrapper"><button id="leftBtn" (click)="prevSlide()"><</button>
+    <img
+      [src]="slides[CurrentIndex].image"
+      [alt]="slides[CurrentIndex].title"
+    />
+    <div class="overlay-text">{{ slides[CurrentIndex].title }}</div><button id="rightBtn" (click)="nextSlide()">></button>
+  </div>
+
+  <div class="controls">
+    
+    
+  </div>
+</div>
+</section>
