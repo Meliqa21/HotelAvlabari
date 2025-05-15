@@ -8,5 +8,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
+ isMenuOpen = false;
 
+ Close(){
+  this.isMenuOpen = false;
+ }
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

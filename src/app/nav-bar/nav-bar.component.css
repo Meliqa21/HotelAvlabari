@@ -7,7 +7,7 @@ nav {
     justify-content: space-evenly;
 }
 
-ul {
+.list {
     display: flex;
     gap: 15px;
     list-style: none;
@@ -28,4 +28,62 @@ li:hover {
 .Logo img {
 width: 100%;
 height: 100%;
+}
+
+.burger-container {
+    display: none;
+}
+
+.burger-icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #3B4C44;
+  color: #ffd689;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.menu.open {
+  display: block;
+}
+
+.menu li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu li:hover {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width:700px) {
+        .burger-container {
+  position: relative;
+}
+.burger-container {
+    display: block;
+}
+
+.list {
+    display: none;
+}
+
+
+    
 }
