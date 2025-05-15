@@ -55,4 +55,7 @@ font-size: 25px;
   color: #E8CD9B;
   max-width: 50%;
 }
+.image-wrapper button {
+  padding: 10px 10px;
+}
 }
