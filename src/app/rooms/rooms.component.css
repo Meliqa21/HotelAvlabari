@@ -117,6 +117,15 @@ section {
     right: 5px;
     top: 5px;
 }
+
+#X:hover {
+    cursor: pointer;
+}
+
+.fa-arrow-right:hover {
+    cursor: pointer;
+}
+
 .modalImg Img {
     /* width: 400px;
     height: 300px; */
@@ -199,6 +208,7 @@ section {
 #booking {
     width: 80%;
 }
+
 
 @media screen and (max-width:500px) {
     .mainDiv {

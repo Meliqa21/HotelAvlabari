@@ -5,4 +5,6 @@ export interface Room {
     image:string | string[];
     roomN:number;
     description:string;
+    descriptionR:string;
+    descriptionGeo:string;
 }

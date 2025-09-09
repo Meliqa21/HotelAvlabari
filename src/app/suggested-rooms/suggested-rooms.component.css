@@ -227,6 +227,14 @@ header .header-text::before {
     cursor: pointer;
 }
 
+#X:hover {
+    cursor: pointer;
+}
+
+.fa-arrow-right:hover {
+    cursor: pointer;
+}
+
 
 @media screen and (max-width:800px) {
     .modal-content {
