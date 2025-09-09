@@ -242,8 +242,8 @@ header .header-text::before {
         padding: 15px;
     }
     .modal-content img {
-        width: 100%;
-        height: 50%;
+        width: 400px;
+        height: 250px;
     }
 .amenitis {
     gap: 35px;
@@ -255,6 +255,14 @@ header .header-text::before {
 @media screen and (max-width:500px) {
     .mainDiv {
         width: 100%;
+    }
+      #ds {
+        height: 150px;
+        overflow-y: scroll;
+    }
+     .modal-content img {
+        width: 250px;
+        height: 150px;
     }
 }
 }

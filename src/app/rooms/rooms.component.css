@@ -199,9 +199,10 @@ section {
         padding: 15px;
     }
     .modal-content img {
-        width: 70%;
-        height: 50%
+        width: 400px;
+        height: 250px;
     }
+
 .amenitis {
     gap: 25px;
 }
@@ -213,6 +214,14 @@ section {
 @media screen and (max-width:500px) {
     .mainDiv {
         width: 100%;
+    }
+    #ds {
+        height: 150px;
+        overflow-y: scroll;
+    }
+         .modal-content img {
+        width: 250px;
+        height: 150px;
     }
 }
 
